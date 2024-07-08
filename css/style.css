@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* دعم الاتجاه من اليمين إلى اليسار */
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .input-group label {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+body.rtl .input-group img {
+    left: auto;
+    right: 20px;
+}
+
+.login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-section {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-title {
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.form-title p {
+    color: rgba(82, 82, 82, 1);
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background: rgba(240, 237, 255, 0.8);
+    border-radius: 16px;
+    width: 100%;
+}
+
+.input-group label {
+    margin-right: 10px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 20px 40px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.input-group input:focus {
+    outline: none;
+}
+
+.input-group img {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.login-button {
+    padding: 20px;
+    background: linear-gradient(99.78deg, #9181F4 -5.85%, #5038ED 109.55%);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: fit-content;
+}
+
+.login-with {
+    position: relative;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.login-with::after,
+.login-with::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: rgba(240, 237, 255, 1);
+    top: 50%;
+}
+
+.login-with::after {
+    right: 1px;
+    transform: translateY(-50%);
+}
+
+.login-with::before {
+    left: 1px;
+    transform: translateY(-50%);
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social-login .google,
+.social-login .facebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(240, 237, 255, 1);
+    border-radius: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.social-login img {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.login-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/Rectangle.png");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.image-box {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 46px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-image {
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    width: 75%;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.text-overlay h2 {
+    max-width: 180px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.icon {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    padding: 7px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+/* استعلامات الوسائط */
+@media (min-width: 991px) {
+    .login {
+        flex-direction: row;
+    }
+
+    .login-section,
+    .login-content {
+        flex: 1;
+    }
+
+    .login-section {
+        padding: 40px;
+    }
+
+    .login-content {
+        padding: 0;
+    }
+
+    .text-overlay h2 {
+        font-size: 32px;
+    }
+}
+
+/* إخفاء قسم login-content عند الشاشات 991 أو أصغر */
+@media (max-width: 991px) {
+    .login-content {
+        display: none;
+    }
+}
